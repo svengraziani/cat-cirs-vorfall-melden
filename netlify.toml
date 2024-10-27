@@ -1,0 +1,5 @@
+
+
+[[edge_functions]]
+function = "submit-vorfall-melden"
+path = "/api"
