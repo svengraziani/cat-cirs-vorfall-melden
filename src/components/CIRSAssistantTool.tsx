@@ -26,7 +26,7 @@ const CIRSAssistantTool: React.FC = () => {
         <ClipboardList className="mr-2" />
         Vorfallmeldung
       </h2>
-      <form name="fall" method="POST" data-netlify="true" className="space-y-4">
+      <form name="fall" method="POST" action="/.netlify/functions/send-form-email" data-netlify="true" className="space-y-4">
         <input type="hidden" name="form-name" value="fall" />
         
         <ReporterProfessionSelect />
