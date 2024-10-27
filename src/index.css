@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 180 16% 99%;
+    --foreground: 174 100% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 174 100% 13%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 174 100% 13%;
+ 
+    --primary: 174 100% 29%;
+    --primary-foreground: 180 16% 99%;
+ 
+    --secondary: 180 16% 93%;
+    --secondary-foreground: 174 100% 13%;
+ 
+    --muted: 180 16% 93%;
+    --muted-foreground: 174 60% 30%;
+ 
+    --accent: 180 16% 93%;
+    --accent-foreground: 174 100% 13%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 180 16% 99%;
+
+    --border: 174 30% 85%;
+    --input: 174 30% 85%;
+    --ring: 174 100% 29%;
+ 
+    --radius: 0.5rem;
+  }
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+label {
+  color: white;
+}
