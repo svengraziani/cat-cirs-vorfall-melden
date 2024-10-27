@@ -19,8 +19,12 @@ const handler = async (event) => {
 
 
   try {
-    const formData = querystring.parse(event.body);
-
+    // Use URLSearchParams to parse the form data
+    const formData = {};
+    const params = new URLSearchParams(event.body);
+    for (const [key, value] of params.entries()) {
+      formData[key] = value;
+    }
     // Compose the email options
     const mailOptions = {
       from: process.env.EMAIL_USER,
