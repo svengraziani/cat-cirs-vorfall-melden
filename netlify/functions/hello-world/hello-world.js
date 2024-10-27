@@ -19,7 +19,7 @@ const handler = async (event) => {
 
 
   try {
-    const formData = typeof event.body === 'string' ? JSON.parse(event.body) : event.body; // Handle already parsed data
+    const formData = querystring.parse(event.body);
 
     // Compose the email options
     const mailOptions = {
