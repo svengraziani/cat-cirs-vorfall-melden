@@ -17,8 +17,9 @@ const handler = async (event) => {
     return { statusCode: 405, body: 'Method Not Allowed' };
   }
 
+
   try {
-    const formData = JSON.parse(event.body); // Parses form submission JSON data
+    const formData = typeof event.body === 'string' ? JSON.parse(event.body) : event.body; // Handle already parsed data
 
     // Compose the email options
     const mailOptions = {
